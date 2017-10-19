@@ -40,7 +40,7 @@ let config = {
   output: {
     path: path.resolve('./dist'),
     // Hash name on prod (prevent from caching issue when deployed changes)
-    filename: dev ? '[name].js' : '[name].[chunkhash:8].js',
+    filename: dev ? '[name].js' : '[name].js',
     publicPath: "./dist/",
   },
   // Alis directory URL
@@ -95,7 +95,7 @@ let config = {
           options: {
             // Under limit, file will be translate ine base16 (usefull for icons e.g)
             limit: 8192,
-            name: '[name].[hash:7].[ext]'
+            name: '[name].[ext]'
           }
         },
         {
@@ -117,7 +117,7 @@ let config = {
   // disable in dev
     new ExtractTextPlugin({
       // Hash name on prod (prevent from caching issue when deployed changes)
-      filename: dev ? '[name].css' : '[name].[contenthash:8].css',
+      filename: dev ? '[name].css' : '[name].css',
       disable: dev
     })
   ]

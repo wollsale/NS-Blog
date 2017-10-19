@@ -1,11 +1,4 @@
-// INJECT CONTENT ON TITLES
-// Ready to animate
-var title = document.querySelector(".header-blog__title");
-var message = "3 months in Madrid";
 
-for (var i = 0; i < message.length; i++) {
-  title.innerHTML += "<span>" + message[i] + "</span>";
-}
 
 
 
