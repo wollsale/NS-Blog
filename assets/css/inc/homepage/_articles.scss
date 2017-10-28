@@ -1,0 +1,117 @@
+.articles {
+  @media screen and(max-width: $article-width) {
+    padding-left: 2rem; padding-right: 2rem;
+  }
+
+  &__item {
+    margin-bottom: 50rem;
+  }
+}
+
+.article {
+  display: block;
+
+  max-width: $article-width;
+  height: 80vh;
+  margin: 0 auto;
+
+  text-decoration: none;
+  color: $color-main;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transition: transform 1.6s linear;
+    }
+  }
+
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+
+    font-family: 'Lato', 'Europa-regular', monospace;
+
+    @media screen and (max-width: 30rem) {
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    &--min {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    order: 2;
+    font-size: 1.6rem;
+    color: #000;
+
+    transition: padding .1s $ease-out;
+    position: relative;
+  }
+
+  &__date {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    color: darken($tag-background, 40%);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+
+    @media screen and (max-width: 30rem) {
+      margin-left: 0;
+      margin-top: 1rem; margin-bottom: 1rem;
+    }
+  }
+}
+
+
+
+.article {
+  cursor: url('../../assets/img/cursorDefault.svg'), default;
+  &:hover {
+    cursor: url('../../assets/img/cursor.svg'), default;
+
+    .article__title {
+      /* transform: translateX(-10px); */
+      padding-right: 10px;
+      transition: padding .3s $ease-out;
+
+      &::after {
+        width: 3rem;
+        transition: transform .3s $ease-out;
+      }
+    }
+
+    .article__img img {
+      transform: scale(1.3);
+      transition: transform 16s linear;
+    }
+  }
+}
+
+
+
+.article__tags {
+  display: flex;
+
+  @media screen and (max-width: 30rem) {
+    display: none;
+  }
+
+  .tag {
+    margin-right: .5rem;
+    @extend %tag;
+  }
+}

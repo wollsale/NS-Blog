@@ -1,9 +1,12 @@
 const path = require('path')
+// webpack.config.js 
+var ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 const uglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const dev = process.env.NODE_ENV === "dev"
+const dev = process.env.NODE_ENV === "dev";
+
 
 // Loader CSS
 // css-loader => transform CSS in string
@@ -12,6 +15,16 @@ const dev = process.env.NODE_ENV === "dev"
 let cssLoaders = [
           { loader: 'css-loader', options: { importLoaders: 1, minimize: !dev, url: true } },
         ]
+
+
+let ModernizrConfig = {
+  'options': [
+    'setClasses',
+  ],
+  'feature-detects': [
+    'css/objectfit'
+  ]
+}
 
 
 // If prod, use autoprexifer post css plugin
@@ -119,7 +132,9 @@ let config = {
       // Hash name on prod (prevent from caching issue when deployed changes)
       filename: dev ? '[name].css' : '[name].css',
       disable: dev
-    })
+    }),
+
+    new ModernizrWebpackPlugin(ModernizrConfig)
   ]
 }
 

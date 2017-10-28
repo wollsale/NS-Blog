@@ -29,6 +29,8 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "img-loader": "^2.0.0",
+    "json-loader": "^0.5.7",
+    "modernizr-webpack-plugin": "^1.0.6",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",

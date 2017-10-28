@@ -1,0 +1,24 @@
+$green : #6BEAB0;
+$light-green : #D6FFEC;
+$blue : #001E47;
+$light-grey: #eee;
+$dark-grey: #888;
+
+$main-color : $light-green;
+$text-color: $green;
+
+$footer-color : $main-color;
+
+$color_main: $dark-grey;
+$tag-background : $light-grey;
+$tag-color : $dark-grey;
+$info-background: lighten($blue, 70%);
+$banner-background : $light-green;
+$tag-background : $light-grey;
+$container : 1440px;
+
+$article-width : $container;
+
+
+$secondary-font : 'Lato', 'Europa-regular', monospace;
+$primary-font : 'Europa-regular', 'Lato', monospace;

@@ -1,0 +1,11 @@
+.objectfitContainer {
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+
+	&--is-active {
+		img {
+			opacity: 0;
+		}
+	}
+}

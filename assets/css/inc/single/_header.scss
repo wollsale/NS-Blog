@@ -1,0 +1,41 @@
+.single {
+	.header {
+		height: 60vh;
+		background: $main-color;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__content {
+			text-align: center;
+		}
+
+		&__title {
+			font-size: 9rem;
+			font-family: $primary-font;
+			color: $text-color;
+			margin: 1rem 0;
+		}
+
+		&__date {
+			font-family: $secondary-font;
+			@extend .article__date;
+		}
+
+		&__tags {
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			top: 2rem; left: 50%;
+			transform: translateX(-50%);
+
+			> .tag {
+				font-family: $secondary-font;
+				@extend %tag;
+				background: $text-color;
+				color: white;
+				margin-right: .5rem;
+			}
+		}
+	}
+}
